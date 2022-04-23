@@ -1,7 +1,9 @@
+import styles from './Header.module.scss'
+
 const Header = () => {
   return(
-    <header>
-      <h1>SMS APP</h1>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Send Messages (SMS)</h1>
     </header>
   )
 }

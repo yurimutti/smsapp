@@ -2,6 +2,8 @@
 import { FormEvent, useState } from 'react';
 import axios from 'axios'
 
+import styles from './SendForm.module.scss'
+
 const SendForm = () => {
   const [number, setNumber] = useState('')
   const [text, setText] = useState('')
@@ -39,11 +41,13 @@ const SendForm = () => {
   }
 
   return(
-    <form onSubmit={handleSendMessage}>
-      <input type="text" onChange={handleChange} name="number"/>
-      <textarea onChange={handleChange} name="text" />
-      <button>Enviar</button>
-    </form>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSendMessage}>
+        <input type="text" onChange={handleChange} name="number" placeholder="(99) 9999-9999"/>
+        <textarea onChange={handleChange} name="text" placeholder="Type a message..."/>
+        <button>Enviar</button>
+      </form>
+    </div>
   )
 }
 

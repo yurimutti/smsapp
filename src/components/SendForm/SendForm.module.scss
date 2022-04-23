@@ -1,0 +1,41 @@
+.container {
+  background: var(--gray-50);
+  border-radius: 16px;
+  margin: 0  auto;
+  min-width: 280px;
+  max-width: 35vw;
+  padding: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea {
+    margin: 6px  0;
+    font-family: 'Roboto';
+    padding: 10px 16px;
+    font-size: 14px;
+    color: var(--black-900);
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  button {
+    margin-top: 16px;
+    font-size: 18px;
+    color: var(--white);
+    height: 49px;
+    cursor: pointer;
+    background: var(--green-500);
+    border: none;
+    transition: all 0.2s;
+
+    &:hover {
+      filter: brightness(115%)
+    }
+  }
+}
