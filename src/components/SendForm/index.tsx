@@ -1,5 +1,6 @@
 
 import { FormEvent, useState } from 'react';
+import { toast } from 'react-toastify';
 import axios from 'axios'
 
 import styles from './SendForm.module.scss'
@@ -42,6 +43,9 @@ const SendForm = () => {
 
   return(
     <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Send Messages (SMS)</h1>
+      </header>
       <form className={styles.form} onSubmit={handleSendMessage}>
         <input type="text" onChange={handleChange} name="number" placeholder="(99) 9999-9999"/>
         <textarea onChange={handleChange} name="text" placeholder="Type a message..."/>
